@@ -20,17 +20,9 @@ server.listen(port, function() {
 });
 
 
-
-/*
-0 - empty
-1 - ship
-2 - miss
-3 - wounded
-4 - destroyed
-*/
 const constants = Object.freeze({ 
-  cellsAlongAxis: 10, //[4, 3, 2, 1]
-  shipsAmount: Object.freeze([1, 1, 0, 0]),
+  cellsAlongAxis: 10, //[1, 1, 0, 0]
+  shipsAmount: Object.freeze([4, 3, 2, 1]),
   neibhs: [[-1, -1], [-1, 0], [-1, 1], [0, -1], [0, 1], [1, -1], [1, 0], [1, 1]]
 });
 
@@ -235,8 +227,6 @@ class GameProcess {
     this.players.forEach(player => this.generateShips(player));
     this.ticketsMachine = new TicketsMachine();
     /*fleet - all ships in army*/
-    //this.fields = Array.apply(null, Array(2)).map(footer.createField);
-
   }
 
   generateShips(player) {
@@ -268,7 +258,6 @@ class GameProcess {
   }
 
 };
-
 
 /*printing*/
 // game.players.forEach(player => {
@@ -314,9 +303,6 @@ class ServerProcess {
         status: 'interrupted',
         whoDisconnected: socket.id
       }));
-
-      //socket.on('enemyDisconnect')
-
     }
   }
 
