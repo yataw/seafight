@@ -1,0 +1,82 @@
+.tablesContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*border: 1px dashed grey;*/
+}
+
+.logger {
+  display: inline;
+
+  font-size: 1.875em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+table {
+  border: 1px double black;
+  box-shadow: 0 0 50px rgba(0,0,0,0.5); /* Параметры тени */
+}
+
+table caption {
+  font-size: 1.875em;
+  font-family: "Times New Roman", Times, serif;
+}
+
+table caption.whoTurns {
+  color: green;
+  font-weight: 600;
+}
+
+
+td, 
+th {
+  width: 30px;
+  height: 30px;
+  background: #D6D6D6;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+th {
+  text-align: center;
+}
+
+#enemyTable td:hover {
+  border: 2px solid #FF9900;
+}
+
+td.empty {
+  background: #F5F5F5;
+}
+
+#enemyTable td.empty:hover {
+   border: 2px solid #66FF00;
+}
+
+td.ship1x,
+td.ship2x,
+td.ship3x,
+td.ship4x {
+  /*content: "&#183;";*/
+  /*  text-align: center;*/
+  background: #66FF00;
+}
+
+td.miss {
+  background: #D6D6D6;
+}
+
+td.miss::after {
+  /*content: "&#x25CF";*//* "&#x25cf";*/
+}
+
+
+td.wounded {
+  background: red;
+}
+
+td.destroyed {
+  background: #B00000;
+}
+/*  empty: 0, ship1x: 1, ship2x: 2, ship3x: 3, ship4x: 4, 
+  miss: 5, wounded: 6, destroyed: 7 });*/

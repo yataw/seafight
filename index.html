@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Seafigth</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/styles/styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+  <div class="tablesContainer">
+    <table id="playerTable">
+      <caption>You</caption>
+      <thead>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+          <tr>
+            <!-- <td colspan="4" class='totalPersons'> Total <b>3</b> persons</td> -->
+          </tr>
+      </tfoot>
+    </table>
+
+    <table id="enemyTable">
+      <caption>Enemy</caption>
+      <thead>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+          <tr>
+            <!-- <td colspan="4" class='totalPersons'> Total <b>3</b> persons</td> -->
+          </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <div class = "logger"><br>Here will be logs...</div>
+
+</body>
+<script src="/static/client.js"></script>
+
+</html>
