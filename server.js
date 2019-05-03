@@ -1,4 +1,6 @@
 /* http://localhost:1234/ */
+"use strict";
+
 const express = require('express');
 const http = require('http');
 const path = require('path');
@@ -6,7 +8,27 @@ const socketIO = require('socket.io');
 const app = express();
 const server = http.Server(app);
 const io = socketIO(server);
-const port = 1234;
+
+
+var prompt = require('prompt');
+
+  //
+  // Start the prompt
+  //
+  prompt.start();
+
+  //
+  // Get two properties from the user: username and email
+  //
+
+  prompt.get(['select port'], function (err, result) {
+    //
+    // Log the results.
+    //
+
+
+
+const port = result['select port'];
 
 app.set('port', port);
 app.use('/static', express.static(__dirname + '/static'));
@@ -407,3 +429,7 @@ class ServerProcess {
 
 
 const serverProcess = new ServerProcess(io);
+
+
+
+});
